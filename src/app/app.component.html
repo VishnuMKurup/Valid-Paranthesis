@@ -11,9 +11,9 @@
 
 <div *ngIf="isChecked">
   <div *ngIf="isValid; else notValid">
-    <p class="text-sucess">IS VALID PARANTHESIS</p>
+    <p class="text-sucess">VALID PARANTHESIS</p>
   </div>
   <ng-template #notValid>
-    <p class="text-danger">NOT VALID PARANTHESIS</p>
+    <p class="text-danger">INVALID PARANTHESIS</p>
   </ng-template>
 </div>
