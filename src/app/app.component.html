@@ -1,17 +1,19 @@
-Enter String :
+<h1>Check Validity Of Paranthesis</h1>
 <div>
   <input type="text" [formControl]="string" />
   <div *ngIf="string.errors?.required" class="text-danger">
     String Is Required
   </div>
 </div>
-<button class="ml-10" (click)="checkValidity()">Check</button>
+<button *ngIf="string.value" class="ml-10" (click)="checkValidity()">
+  Check
+</button>
 
 <div *ngIf="isChecked">
   <div *ngIf="isValid; else notValid">
     <p class="text-sucess">IS VALID PARANTHESIS</p>
   </div>
   <ng-template #notValid>
-    <p class="text-danger">NOT VALID</p>
+    <p class="text-danger">NOT VALID PARANTHESIS</p>
   </ng-template>
 </div>
